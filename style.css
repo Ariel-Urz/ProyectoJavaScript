@@ -260,3 +260,23 @@ footer{
     background-color: rgb(254, 178, 86);
     height: 250px;
 }
+
+
+/*ESTILO DEL SWEETALERT*/
+
+.swal2-container.swal2-center>.swal2-popup {
+    background-color: rgb(255, 119, 0);
+    border-radius: 150px;
+}
+
+.swal2-title{
+    color: black;
+}
+
+.swal2-html-container{
+    color: black;
+}
+
+.swal2-container.swal2-top>.swal2-popup{
+    background-color: rgb(214, 153, 10);
+}

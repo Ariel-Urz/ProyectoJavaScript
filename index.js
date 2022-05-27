@@ -15,9 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+/*----- Boton vaciar carrito con libreria sweet alert*/
 botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
-    actualizarCarrito()
+        Swal.fire({
+          title: "Desea vaciar carrito?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "Sí",
+          cancelButtonText: "No",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Exitosamente",
+              icon: "success",
+              text: "Los productos del carrito se han eliminado",
+            });
+            carrito.length = 0
+            actualizarCarrito()
+          }
+        });
+    
 })
 
 //Crea productos en el html
@@ -40,7 +57,15 @@ stockProductos.forEach((producto) => {
     //el add event listener
 
     boton.addEventListener('click', () => {
-        //esta funcion ejecuta el agregar el carrito con la id del producto
+        //esta funcion ejecuta el agregar el carrito con la id del producto  ------------- con libreria sweet alert
+        Swal.fire({
+            title: `${producto.nombre}`,
+            text: 'Agregado al carrito',
+            imageUrl: `${producto.img}`,
+            imageWidth: 100,
+            imageHeight: 150,
+            imageAlt: 'Custom image',
+          })
         agregarAlCarrito(producto.id)
         
     })
@@ -75,8 +100,15 @@ const agregarAlCarrito = (prodId) => {
 }
 
 
-//ELIMINAR LOS PRODUCTOS DEL CARRITO
+//ELIMINAR LOS PRODUCTOS DEL CARRITO  -------- con libreria sweet alert
 const eliminarDelCarrito = (prodId) => {
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Producto Elminado',
+        showConfirmButton: false,
+        timer: 2500
+      })
     const item = carrito.find((prod) => prod.id === prodId)
 
     const indice = carrito.indexOf(item)
