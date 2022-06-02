@@ -147,3 +147,56 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     
 }
+
+
+
+
+
+
+
+
+
+
+//BOTON JSON DESAFIO DE FETCH
+ 
+let produc = [];
+
+const traerDatosJson = async () => {
+
+    let response = await fetch("./api.json")
+    produc = await response.json()
+    
+    stockProductos.forEach((producto) => {
+        const div = document.createElement('div')
+        div.classList.add('producto')
+        div.innerHTML = `
+        <img src=${producto.img} alt= "">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.desc}</p>
+        <p>marca: ${producto.marca}</p>
+        <p class="precioProducto">Precio:$ ${producto.precio}</p>
+        <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+        `
+        contenedorProductos.appendChild(div)
+    
+        const boton = document.getElementById(`agregar${producto.id}`)
+        //Por cada elemento de mi array, creo un div, lo cuelgo, le pongo un id particular, una vez colgado
+        //le hago un get element by id (el de agregar) Obtengo el elemento y a dicho elemento le agregamos
+        //el add event listener
+    
+        boton.addEventListener('click', () => {
+            //esta funcion ejecuta el agregar el carrito con la id del producto  ------------- con libreria sweet alert
+            Swal.fire({
+                title: `${producto.nombre}`,
+                text: 'Agregado al carrito',
+                imageUrl: `${producto.img}`,
+                imageWidth: 100,
+                imageHeight: 150,
+                imageAlt: 'Custom image',
+              })
+            agregarAlCarrito(producto.id)
+            
+        })
+    })
+
+}
