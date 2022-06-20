@@ -1,0 +1,139 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import "variables.scss";
+@import './header';
+@import "index.scss";
+@import "juguetes.scss";
+@import "edad.scss";
+@import "marca.scss";
+@import "promociones.scss";
+@import "contacto.scss";
+@import "quienessomos.scss";
+@import "footer.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background: linear-gradient(to right,#dafcf0,#000000)
+}
+
+        /*body de replazo*/
+
+/*body{
+    background-color: #dafcf0;
+}*/
+
+
+.head{
+    display: flex;
+}
+   
+main{
+    border-top: solid 2px black;
+}
+
+
+.grillaMain{
+    display: grid;
+}
+
+
+
+
+                                                                     /*MOBILE*/
+
+
+
+@media screen and (max-width:600px){
+
+
+                                    /*INDEX MOBILE*/
+
+                                    /*ESTRUCUTURA DEL HEAD MOBILE*/
+
+                                     /*ESTRUCUTURA DEL MAIN INDEX MOBILE*/
+
+                                    /*FOOTER*/
+
+                                    /*HTML JUGUETES MOBILE*/
+
+                                    /*HTML EDAD MOBILE*/
+
+                                    /*HTML MARCA MOBILE*/
+
+                                    /*HTML PROMOCION MOBILE*/
+
+                                    /*HTML CONTACTO MOBILE*/
+
+                                    /*HTML Quienes Somos*/  
+    
+}
+
+
+@media screen and (min-width:600px) and (max-width:992px){
+
+
+                                                                      /*TABLET*/
+ 
+                                            /*INDEX DE TABLET*/
+
+                                            /*ESTRUCUTURA DEL HEAD TABLET*/                    
+
+                                            /*FOOTER*/
+
+                                            /*ESTRUCUTURA DEL MAIN INDEX TABLET*/
+
+                                            /*HTML JUGUETES TABLET*/
+
+                                            /*HTML EDAD TABLET*/
+
+                                            /*HTML MARCA TABLET*/
+
+                                            /*HTML MARCA MARCA*/
+
+                                            /*HTML PROMOCION TABLET*/
+
+                                            /*HTML CONTACTO TABLET*/
+
+                                            /*HTML QUINES SOMOS TABLET*/       
+
+                                            /*HTML Quienes Somos TABLET*/   
+    
+
+}
+
+
+
+@media screen and (min-width:992px){
+
+
+                                                                            /*DESKTOP*/
+
+   
+                                    /*INDEX DEL DESKTOP*/
+
+                                    /*ESTRUCUTURA DEL HEAD DESKTOP*/
+
+                                    /*ESTRCUTURA DEL MAIN INDEX DESKTOP*/
+
+                                    /*ESTRUCTURA DEL FOOTER DESKTOP*/
+
+                                    /*HTML JUGUETES DESKTOP*/
+
+                                    /*HTML EDAD DESKTOP*/
+
+                                    /*HTML MARCA DESKTOP*/
+
+                                    /*HTML PROMOCION DESKTOP*/
+
+                                    /*HTML CONTACTO DESKTOP*/
+
+                                    /*HTML QUIENES SOMOS DESKTOP*/
+
+                                    /*HTML Quienes Somos*/   
+   
+}

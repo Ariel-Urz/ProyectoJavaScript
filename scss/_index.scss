@@ -1,0 +1,328 @@
+@media screen and (max-width:600px){
+
+    
+                          /*INDEX MOBILE*/       
+
+                      /*ESTRUCUTURA DEL MAIN */
+
+    .grillaMainGeneral{
+
+        display: grid;
+        grid-template-columns: 90%;
+        grid-template-rows: 650px 700px 700px 700px 700px;
+        grid-template-areas: "a1"
+                             "a2"
+                             "a3"
+                             "a4"
+                             "a5";
+        justify-content: center;
+        
+
+    }
+
+                            /*PROMOCION*/
+
+    .grillaMain{
+        
+        @extend .grillaMainGeneral;
+        align-items: center;
+
+                /*Contenedor de Promocion*/
+
+            & .cardPromocion{
+                @extend .contenedorGeneral;
+                background-image:$colorContenedor;
+                border-radius: 100px;
+           
+    }
+
+    }
+        /*Contenedor de Promocion*/
+
+    .contenedorGeneral{
+
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+                                /*POPULARES, NOVEDADES, MEDIO DE PAGO, FORMAS DE ENVIO*/
+
+
+        /*Contenedor de Populares,Novedades,Medio de Pago,Forma de Envio*/
+
+    .contenedor{
+        @extend .contenedorGeneral;
+        background-image: $colorContenedor2;
+
+                   /*SUBTITULOS DE LA PAGINA*/
+
+            & .estiloTextoUno{
+                background:linear-gradient( to right,#dafcf0,#dafcf0,#000000,#040404 );
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size:  30px;
+                font-family: $fuenteDos;
+                font-weight: 100;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+                
+            }
+
+                    /*Estilo de Imagen de Promocion, Populares, Novedades*/
+
+            & .estiloImg{
+                width: 70%;
+                height: 60%;
+            }
+
+                    /*Estilo de Imagen de Forma de Pago*/
+
+            & .estiloImgPago{
+                width: 80%;
+                height: 40%;
+            }
+
+                /*Estilo de Imagen de Forma de Envio*/
+
+            & .estiloImgEnvio{
+                width: 40%;
+                height: 40%;
+            
+            }
+
+                /*Estilo de los Parrafos del Main*/
+
+            & .estiloParrafo{
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-family: $fuenteDos;
+            
+            }
+          
+    }
+
+}
+
+@media screen and (min-width:600px) and (max-width:992px){
+
+                                   
+                                    /*INDEX TABLET*/
+
+                                 /*ESTRUCUTURA DEL MAIN*/
+                           
+    .grillaMain{
+
+        display: grid;
+        grid-template-columns: 90%;
+        grid-template-rows: 750px 750px 750px 750px 750px;
+        grid-template-areas: "a1"
+                             "a2"
+                             "a3"
+                             "a4"
+                             "a5";
+        justify-content: center;
+        align-items: center;
+
+        & .cardPromocion{
+    
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image:$colorContenedor;
+            border-radius: 100px;
+               
+        }
+      
+    }
+        /*Contenedor de Promocion*/
+
+    .contenedorGeneral{
+
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+                                    /*POPULARES, NOVEDADES, MEDIO DE PAGO, FORMAS DE ENVIO*/
+
+        /*Contenedor de Populares,Novedades,Medio de Pago,Forma de Envio*/
+
+    .contenedor{
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: $colorContenedor2;
+
+
+        & .estiloTextoUno{
+            background:linear-gradient( to right,#dafcf0,#dafcf0,#000000,#040404 );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size:  30px;
+            font-family: $fuenteDos;
+            font-weight: 100;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        
+        }
+
+                /*Estilo de Imagen de Promocion, Populares, Novedades*/
+
+        & .estiloImg{
+            width: 70%;
+            height: 60%;
+        }
+
+            /*Estilo de Imagen de Forma de Pago*/
+
+        & .estiloImgPago{
+            width: 80%;
+            height: 40%;
+        }
+
+            /*Estilo de Imagen de Forma de Envio*/
+
+        & .estiloImgEnvio{
+            width: 40%;
+            height: 40%;
+        
+        }
+
+            /*Estilo de los Parrafos del Main*/
+
+        & .estiloParrafo{
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-family: $fuenteDos;
+        
+        }
+
+
+          
+    }
+
+}
+
+
+@media screen and (min-width:992px){
+
+                              /*ESTRCUTURA DEL MAIN INDEX DESKTOP*/
+
+            /*Contenedor de Promocion*/
+
+    .contenedorGeneral1{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }                          
+
+    .grillaMain{        
+
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 650px 500px 500px;
+        grid-template-areas: "a1 a1"
+                             "a2 a3"
+                             "a4 a5";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+
+        & .cardPromocion{
+
+            @extend .contenedorGeneral1;
+            background-image:$colorContenedor;
+            border-radius: 100px;
+            width: 75%;
+            height: 600px;
+            grid-area: a1;  
+        }
+
+        & #carouselExampleIndicators{
+            grid-area: a1;
+            width: 60%;
+        }
+    
+    }
+
+
+
+                              /*POPULARES, NOVEDADES, MEDIO DE PAGO, FORMAS DE ENVIO*/
+
+        /*Contenedor de Pupalares,Novedades,Forma de Pago, Forma de envio*/
+    
+    .contenedor{
+        @extend .contenedorGeneral1;
+        background-image: $colorContenedor2;
+        width: 90%; 
+
+        & .estiloTextoUno{
+            background:linear-gradient( to right,#dafcf0,#dafcf0,#000000,#040404 );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size:  30px;
+            font-family: $fuenteDos;
+            font-weight: 100;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            
+        }
+
+                /*Estilo de Imagenes de los Contenedores*/
+
+        & .estiloImg{
+            width: 55%;
+            height: 65%;
+        }
+
+            /*Estilo de Imagenes de Pago*/
+
+        & .estiloImgPago{
+            width: 70%;
+            height: 40%;
+            margin-top: 50px;
+        }
+
+            /*Estilo de Imagenes de Envio*/
+
+
+        & .estiloImgEnvio{
+            width: 40%;
+            height: 40%;
+        
+        }
+
+            /*Estilo del Parrafo de los Contenedores*/
+
+        & .estiloParrafo{
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-family: $fuenteDos;
+        
+        }
+    }
+
+
+}
+
+

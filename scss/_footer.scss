@@ -1,0 +1,164 @@
+@media screen and (max-width:600px){
+
+
+                                          /*FOOTER*/
+
+    
+    footer{
+        background: linear-gradient(to bottom, black, black, rgb(27, 27, 27),#dafcf0);
+    }
+
+                             /*ESTRUCUTURA DEL FOOTER MOBILE*/       
+
+    
+        /*Estilo de Imagenes de Redes*/
+
+    .estiloImgRedes{
+        height: 25%;
+        filter: grayscale(1);
+        transition: all 1s;
+         
+    }
+    .estiloImgRedes:hover{
+        filter: grayscale(0);
+        transform: scale(1.5,1.5);
+    }
+
+            /*Subtitulos del Footer de las PAGINAS*/
+
+    .estiloTextoFooter{
+        color: #ff6600;
+        font-size:  20px;
+        font-family: $fuenteDos;
+        font-weight: 100;
+        padding: 30px;
+        margin-right: 30px;
+
+
+    }
+
+    
+        /*Parrafos del Footer de las PAGINAS*/
+
+    .parrafoFooter{
+        color: rgb(255, 174, 0);
+        font-size: 15px;
+        font-family: $fuenteDos;
+        
+    }
+
+}
+
+
+@media screen and (min-width:600px) and (max-width:992px){
+
+                                      /*FOOTER*/
+
+    
+    footer{
+        background: linear-gradient(to bottom, black, black, rgb(27, 27, 27),#dafcf0);
+    }
+
+                             /*ESTRUCUTURA DEL FOOTER TABLET*/       
+
+    
+        /*Estilo de Imagenes de Redes*/
+
+    .estiloImgRedes{
+        height: 25%;
+        filter: grayscale(1);
+        transition: all 1s;
+         
+    }
+    .estiloImgRedes:hover{
+        filter: grayscale(0);
+        transform: scale(1.5,1.5);
+    }
+            /*Subtitulos del Footer de las PAGINAS*/
+
+    .estiloTextoFooter{
+        color: #ff6600;
+        font-size:  20px;
+        font-family: $fuenteDos;
+        font-weight: 100;
+        padding: 30px;
+        margin-right: 30px;
+
+    }
+
+    
+        /*Parrafos del Footer de las PAGINAS*/
+
+    .parrafoFooter{
+        color: rgb(255, 174, 0);
+        font-size: 15px;
+        font-family: $fuenteDos;
+        
+    }
+}
+
+
+
+@media screen and (min-width:992px){
+
+                                /*FOOTER*/
+                                
+                           /*ESTRUCTURA DEL FOOTER DESKTOP*/
+
+    footer{
+        background: linear-gradient(to bottom, black, black, #000000,black,#dafcf0);
+    }
+
+
+        /*Estilo de Iframe Mapa*/
+    
+    .estiloIframe0{
+        width: 45%;
+        height: 60%;
+        padding: 10px;
+
+    }
+
+        /*Estilo Imagenes de Redes*/
+
+
+    .estiloImgRedes{
+        width: 20%;
+        padding-left: 10px;
+        height: 20%;
+        filter: grayscale(1);
+        transition: all 1s;
+    }
+
+    .estiloImgRedes:hover{
+    filter: grayscale(0);
+    transform: scale(1.5,1.5);
+    }
+
+            /*Subtitulos del Footer de las PAGINAS*/
+
+    .estiloTextoFooter{
+        color: #ff6600;
+        font-size:  20px;
+        font-family: $fuenteDos;
+        font-weight: 100;
+        padding: 30px;
+        margin-right: 30px;
+
+
+    }
+
+    
+        /*Parrafos del Footer de las PAGINAS*/
+
+    .parrafoFooter{
+        color: rgb(255, 174, 0);
+        font-size: 15px;
+        font-family: $fuenteDos;
+        
+    }
+
+
+
+
+}

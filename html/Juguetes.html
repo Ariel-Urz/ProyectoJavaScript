@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Juguetes, Jugueteria, Venta de Juguetes, Jugueteria Jujuy, Peluches, Didacticos">
+    <meta name="description" content=" Jugueteria A&D es una empresa dedicada a la venta de juguetes, trabajamos con productos importados y nacionales">
+    <title>Jugueteria A&D-Juguetes</title>
+    
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Grandstander:wght@500&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/Logofavicon-32x32.png">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    
+    
+      
+    
+</head>
+<body class="body">
+    
+    <head>
+                                 <!--TITULO Y LOGO-->
+        <div class="head">
+
+            <h1 class="estiloTitulo">JUGUETERIA A&D</h1>
+            <a href="../index.html"><img class="animate__animated animate__fadeInLeftBig" id="imgLogo" src="../img/Logo.png" alt="Logo de Pagina"></a>
+
+        </div>
+
+
+                                    <!--MENU-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light contenedorMenu">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html"><img src="../img/NavBar.png" alt="Logo de pagina menu"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                
+                  <li class="nav-item">
+                    <a class="estiloTextoMenu" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="estiloTextoMenu" href="Juguetes.html">Juguetes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="estiloTextoMenu" href="Marca.html">Marca</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="estiloTextoMenu" href="Promociones.html">Promociones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="estiloTextoMenu" href="Contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="estiloTextoMenu" href="QuienesSomos.html">Nosotros</a>
+                  </li>
+                  <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </head>
+    
+    <main class="wrapper">
+      <h2 class="subTitulo">Lista De Productos</h2>   
+      <head id="buttons">
+          <button class="button-value"
+          onclick="filterProduct('Todo')">Todo</button>
+          <button class="button-value"
+          onclick="filterProduct('Coleccion')">Coleccion</button>
+          <button class="button-value"
+          onclick="filterProduct('JuegoMesa')">JuegoMesa</button>
+          <button class="button-value"
+          onclick="filterProduct('Bebe')">Bebe</button>
+          <button class="button-value"
+          onclick="filterProduct('Peluches')">Peluches</button>
+          <button class="button-value"
+          onclick="filterProduct('Vehiculos')">Vehiculos</button>
+          <button class="button-value"
+          onclick="filterProduct('Marvel')">Marvel</button>
+          <button class="button-value"
+          onclick="filterProduct('Mattel')">Mattel</button>
+          <button class="button-value"
+          onclick="filterProduct('Disney')">Disney</button>>
+          <button class="button-value"
+          onclick="filterProduct('Hasbro')">Hasbro</button>
+
+      </head>
+  
+      <div id="contenedor-productos"></div>
+  
+      <section class="modal-contenedor">
+          <section class="modal-carrito">
+              <h3>Carrito</h3>
+              <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+              <p id="carrito-contenedor">
+                
+              </p>
+              <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+              <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+              <button class="boton-agregar" onclick="pagar()">Pagar</button>
+          </section>
+      </section>
+  </main>
+    
+    <footer>
+        <h4 class="estiloTextoFooter">CONTACTO</h4>
+
+        <section class="container">
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="parrafoFooter">Tel: 564654564</p>
+                    <p class="parrafoFooter">juegueteria@gmail.com</p>
+                    <p class="parrafoFooter">San Salvador de Jujuy Argentina</p>
+                    <iframe class="estiloIframe0" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97928.01935824212!2d-65.41053847919984!3d-24.197258822856472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1643663268477!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-12 col-md-3">
+                    <p class="parrafoFooter">Ayuda</p>
+                    <p class="parrafoFooter">Legales</p>
+                    <p class="parrafoFooter">Termino y condiciones</p>
+                    <p class="parrafoFooter">Trabaja con nosotros</p>
+                    <p class="parrafoFooter" >Ventas empresariales</p>
+                    <p class="parrafoFooter">Sucursales</p>
+                    <p class="parrafoFooter">Preguntas frecuentes</p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <a  href="https://www.facebook.com/"><img class="estiloImgRedes" src="../img/Redessociales/facebook.png" alt="Link de Facebook"></a>
+                    <a  href="https://www.instagram.com/"><img class="estiloImgRedes" src="../img/Redessociales/Instagram.png" alt="Link de Instagram"></a>
+                    <a  href="https://www.whatsapp.com/"><img class="estiloImgRedes" src="../img/Redessociales/Whatsapp.png" alt="Link de Whatsapp"></a>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../JavaScript/stock.js"></script>
+    <script defer src="../JavaScript/modal.js"></script>
+    <script defer src="../JavaScript/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
